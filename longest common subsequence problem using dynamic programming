@@ -32,3 +32,13 @@ int main()
 
 	return 0;
 }
+
+
+*********************************************************************************************************************
+                              Time and Space complexity of LCS
+
+Let us count the total subsequences with lengths 1, 2, . . . , n-1, n.
+From theory of permutation and combination we know number of combinations with 1 element is nC1. Number of combinations with 2 elements are nC2 and so on. 
+So a string of length n has nC1 + nC2 + . . . nCn = 2n-1 different possible subsequences.
+Each subsequence takes O(n) time to compare.
+Auxiliary Space: O(n) As we can reuse the same string.
