@@ -27,3 +27,36 @@ printf("%d", fib(n));
 getchar();
 return 0;
 }
+
+
+**********************************************************************************
+        Time complexity of Fibonacci Series using Dynamic Programming
+
+
+The Fibonacci numbers are the numbers in the following integer sequence 0, 1, 1, 2, 3, 5, 8, 13…
+Mathematically Fibonacci numbers can be written by the following recursive formula.
+
+For seed values F(0) = 0 and F(1) = 1
+F(n) = F(n-1) + F(n-2)
+
+F(n) = F(n-1)+F(n-2)
+
+The characteristic equation for this function will be
+x^2 = x+1
+x^2 – x–1 = 0
+
+Solving this by quadratic formula we can get the roots as
+x = (1+\sqrt{5})/2 and x=(1 – \sqrt{5})/2
+
+Now we know that solution of a linear recursive function is given as
+F(n) = ($\alpha_1)^n + ($\alpha_2)^n
+
+where $\alpha_1 and $\alpha_2 are the roots of the characteristic equation.
+So for our Fibonacci function F(n) = F(n-1)+F(n-2) the solution will be
+
+F(n) = ((1+$\sqrt{5})/2)^n+((1-\sqrt{5})/2)^n
+Clearly T(n) and F(n) are asymptotically the same as both functions are representing the same thing.
+Hence it can be said that
+T(n) = O(((1+$\sqrt{5})/2)^n+((1-\sqrt{5})/2)^n)
+or we can write below (using the property of Big O notation that we can drop lower order terms)
+T(n) = O(((1+$\sqrt{5})/2)^n
